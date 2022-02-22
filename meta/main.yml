@@ -2,6 +2,8 @@ galaxy_info:
   author: Andrey Beletsky
   description: Install Filebeat
   company: Software Product Group
+  namespace: ppr_ru
+  role_name: filebeat_role
 
   license: MIT
 
@@ -11,7 +13,13 @@ galaxy_info:
     - name: CentOS
       versions:
         - 7
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
 
   galaxy_tags: []
 
-dependencies: []
+  dependencies: []
