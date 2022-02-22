@@ -1,0 +1,17 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: true
+  tasks:
+  - name: Check Filebeat config file
+    ansible.builtin.stat:
+      path: /etc/filebeat/filebeat.yml
+  - name: Stat Filebeat log directory
+    ansible.builtin.stat:
+      path: /var/log/filebeat
+    register: filebeat_log_directory
+  - name: Check Filebeat log directory
+    assert:
+      that: filebeat_log_directory.stat.isdir is defined and filebeat_log_directory.stat.isdir
