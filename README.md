@@ -11,9 +11,11 @@ Only RHEL-like Linux systems are currently supported.
 Role Variables
 --------------
 
-| Variable name    | Default | Description                                   |
-|------------------|----------|-----------------------------------------------|
-| filebeat_version | "7.14.0" | Which version on Filebeat should be installed |
+| Variable name      | Default | Description                                                                   |
+|--------------------|----------|-------------------------------------------------------------------------------|
+| filebeat_version   | "7.14.0" | Which version on Filebeat should be installed                                 |
+| elasticsearch_host | "localhost" | Host or IP address where ElasticSearch is installed and listened on port 9200 |
+| kibana_host        | "localhost" | Host or IP address where Kibana is installed and listened on port 5601        |
 
 Example Playbook
 ----------------
